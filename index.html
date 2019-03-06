@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html body{
+      min-height: 100%;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    section{
+      height: 100vh;
+      /* height: 500px; */
+      position: relative;
+      text-align: center;
+      width: 100%;
+      padding: 100px;
+    }
+    #a{
+      background: rgba(253, 0, 0, .5)
+    }
+    #b{
+      background: rgba(253, 253, 0, .5)
+    }
+    #c{
+      background: rgba(0, 253, 0, .5)
+    }
+    #d{
+      background: rgba(0, 0, 253, .5)
+    }
+  </style>
+</head>
+<body>
+  <section id="a">aaaaaaaa</section>
+  <section id="b">bbbbbbbb</section>
+  <section id="c">cccccccc</section>
+  <section id="d">dddddddd</section>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
+  <script>
+    var controller = new ScrollMagic.Controller();
+    new ScrollMagic.Scene({
+      triggerElement: '#b',
+      triggerHook: 0,
+      duration: '80%'
+      // duration: 1000
+    })
+    .setPin('#b', {pushFollowers: false})
+    .addIndicators()
+    .addTo(controller)
+
+    // new ScrollMagic.Scene({
+    //   triggerElement: '#c',
+    //   offset: '50%'
+    //   // duration: 1000
+    // })
+    // .setPin('#c')
+    // .addTo(controller)
+
+  </script>
+</body>
+</html>
